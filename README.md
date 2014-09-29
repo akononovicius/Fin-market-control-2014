@@ -8,9 +8,9 @@ Anyone may use this program or its source code for any non-commercial purpose as
 File structure
 --------------
 
-main.java - source code (Java language)
-mymanifest - manifest file which describes the main class
-cmp.bat - compiles java program and produces jar file
-fig4.bat - reproduces data shown in figure 4 of the paper
-fig5.bat - reproduces data shown in figure 5 of the paper
-fig6.bat - reproduces data shown in figure 6 of the paper
+* main.java - source code (Java language)
+* mymanifest - manifest file which describes the main class
+* cmp.bat - compiles java program and produces jar file
+* fig4.bat - reproduces data shown in figure 4 of the paper
+* fig5.bat - reproduces data shown in figure 5 of the paper
+* fig6.bat - reproduces data shown in figure 6 of the paper

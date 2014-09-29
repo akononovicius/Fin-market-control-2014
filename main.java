@@ -53,8 +53,10 @@ public class main {
 					commonVariables.k=Double.parseDouble(str[i]);
 				} else if(str[i].equalsIgnoreCase("--outTime")) {
 					commonVariables.outTime=true;
-				} else if(str[i].equalsIgnoreCase("--symmetricImpat")) {
-					commonVariables.symImpact=true;
+				} else if(str[i].equalsIgnoreCase("--symmetricImpact")) {
+					commonVariables.impact=2;
+				} else if(str[i].equalsIgnoreCase("--chartistImpact")) {
+					commonVariables.impact=1;
 				} else if(str[i].equalsIgnoreCase("--limits") || str[i].equalsIgnoreCase("-lim")) {
 					i++;
 					commonVariables.min=Double.parseDouble(str[i]);
@@ -98,13 +100,15 @@ class launcher {
 	public launcher() {
 		//which impact scenario is used?
 		// adjust epsilon values accordingly
-		if(commonVariables.symImpact) {
+		if(commonVariables.impact==2) {
 			commonVariables.ecf+=0.5*commonVariables.M;
 			commonVariables.efc+=0.5*commonVariables.M;
 			commonVariables.ecc+=0.5*commonVariables.M;
-		} else {
+		} else if(commonVariables.impact==1) {
 			commonVariables.efc+=commonVariables.M;
 			commonVariables.ecc+=0.5*commonVariables.M;
+		} else if(commonVariables.impact==0) {
+			commonVariables.ecf+=commonVariables.M;
 		}
 		startTime=(Calendar.getInstance()).getTimeInMillis();
 		System.out.println("Thread launcher has started!");
@@ -404,7 +408,7 @@ class commonVariables {
 	public static double H=300;//difference in time scale
 	public static double k=0.1;//sprendinio tikslumas (maziau geriau)
 	public static double M=0;//number of controlled agents
-	public static boolean symImpact=false;//is controlled agent impact symmetric?
+	public static int impact=0;//use fundamentalist impact (0), chartist impact (1) or chartist symmetric impact (2)
 }
 
 //a class with function to cleanup PSD and PDF

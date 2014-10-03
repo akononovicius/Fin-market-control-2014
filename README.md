@@ -9,6 +9,7 @@ File structure
 --------------
 
 * main.java - source code (Java language)
+* doubleModel.jar - compiled software
 * mymanifest - manifest file which describes the main class
 * cmp.bat - compiles java program and produces jar file
 * fig4.bat - reproduces data shown in figure 4 of the paper

@@ -165,7 +165,7 @@ class launcher {
 				System.out.println("    ["+i+" - "+perc[i]+"%]");
 			}
 			long eta=(long)Math.floor((100.0/((double)tmin)-1.0)*nowMs);
-			cal.setTimeInMillis(startTime+eta);
+			cal.setTimeInMillis(startTime+nowMs+eta);
 			System.out.println("  ETA: "+sdf.format(cal.getTime())+" (+"+eta+" ms)");
 			System.out.flush();
 		}

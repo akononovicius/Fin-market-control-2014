@@ -1,7 +1,7 @@
 Fin-market-control-2014
 =======================
 
-Java program (and its source code) used to produce results, which will be presented in the worthcomming paper "Preventing endogenous extreme events in herding dominant agent-based financial market" (A. Kononovicius, V. Gontis; draft available at [arXiv](http://arxiv.org/abs/1409.8024)).
+Java program (and its source code) used to produce results, which will be presented in the worthcomming paper "Herding interactions as an opportunity to prevent extreme events in financial markets" (A. Kononovicius, V. Gontis; draft available at [arXiv](http://arxiv.org/abs/1409.8024)).
 
 Anyone may use this program or its source code for any non-commercial purpose as long as the paper is referenced (when it will be published).
 
